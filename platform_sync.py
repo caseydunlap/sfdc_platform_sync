@@ -312,7 +312,7 @@ for account_id, field_updates in account_updates.items():
         if response.status_code == 201:
             result = response.json()
         else:
-            print(f"✗ Failed to create record: {response.status_code}")
+            print(f"Failed to create record: {response.status_code}")
             print(response.json())
     except requests.exceptions.RequestException as e:
             print(f"Error updating Account {account_id}: {e}")
